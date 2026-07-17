@@ -25,3 +25,7 @@ _ide_helper.php
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# Tooling caches & DB admin tool (never commit)
+.php-cs-fixer.cache
+/public/adminer.php
