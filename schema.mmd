@@ -1,0 +1,25 @@
+erDiagram
+    POLLS ||--o{ OPTIONS : "has"
+    OPTIONS ||--o{ VOTES : "receives"
+
+    POLLS {
+        bigint id PK
+        string title
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    OPTIONS {
+        bigint id PK
+        string name
+        bigint poll_id FK
+        timestamp created_at
+        timestamp updated_at
+    }
+
+    VOTES {
+        bigint id PK
+        bigint option_id FK
+        timestamp created_at
+        timestamp updated_at
+    }
